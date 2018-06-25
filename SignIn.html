@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+         <style>
+            body {
+                  font-family: Forte;
+                  background-color: purple;
+                  text-align: center;
+                 }
+
+               * {
+                  box-sizing: border-box;
+                 }
+            .container {
+                         padding: 15px;
+                         background-color: white;
+                       }
+
+             /* Full-width input fields */
+            input[type=text], input[type=password] {
+                  width: 50%;
+                  display: inline-block;
+                  padding: 15px;
+                  margin: 5px 0 22px 0;
+                  border: none;
+                  background: #f1f1f1;
+                                                   }
+
+            input[type=text]:focus, input[type=password]:focus {
+                  background-color: #ddd;
+                  outline: none;
+                                                               }
+
+     /* Overwrite default styles of hr */
+            hr {
+                border: 1px solid #f1f1f1;
+                margin-bottom: 25px;
+               }
+
+      /* Set a style for the submit button */
+            .loginbtn {
+            	opacity: 0.9;
+                background-color: #4B0082;
+                color: white;
+                cursor: pointer;
+                margin: 8px 0;
+                padding: 16px 20px;
+                border: none;
+                width: 30%;
+                
+                         }
+
+            .loginbtn:hover {
+                opacity: 1;
+                               }
+
+            a {
+                color: blue;
+              }
+              /*Password Validation*/
+        
+            .valid:before {
+                position: relative;
+                left: -35px;
+                content: "✔";
+                          }
+
+       /*To Add a red text color and an "x" when the requirements are wrong */
+            .invalid {
+                color: red;
+                     }
+
+            .invalid:before {
+                position: relative;
+                left: -35px;
+                content: "✖";
+                            }
+        </style>
+
+</head>
+<body>
+	<form action="/action_page.php">
+  <div class="container">
+  	<h1>MY FACE APPLICATION</h1>
+    <h2>Login</h2>
+
+    <hr>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <hr>
+    <button type="submit" class="loginbtn">Login</button>
+  </div>
+     </form>
+</body>
+</html>
